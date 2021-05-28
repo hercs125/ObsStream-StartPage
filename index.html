@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const url = "https://api.twitch.tv/helix/search/channels?query=a_seagull"
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'client-id': 'qcqur1fmzff2g56dcxebq7vjocwr3q'
+            }
+        }).then(res => {
+            return res.json(); // 使用 text() 可以得到純文字 String
+        }).then(result => {
+            console.log(result); // 得到「你的名字是：oxxo，年紀：18 歲。」
+        });
+    </script>
+</body>
+
+</html>
