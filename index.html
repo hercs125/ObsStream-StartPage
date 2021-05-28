@@ -55,7 +55,11 @@
 
             console.log(stream_info);
             document.getElementsByClassName("stream_title")[0].innerHTML = stream_info.title;
-            document.getElementsByClassName("info_1")[0].innerHTML = `正在直播<br>${stream_info.game_name}`;
+            if (stream_info.game_name != "") {
+                document.getElementsByClassName("info_1")[0].innerHTML = `正在直播<br>${stream_info.game_name}`;
+            } else {
+                document.getElementsByClassName("info_1")[0].innerHTML = `正在直播中，立即追隨各個社群連結`;
+            }
         });
     </script>
 </body>
