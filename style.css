@@ -1,0 +1,117 @@
+@charset "UTF-8";
+body {
+  /* 直播即將開始 */
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #000000;
+}
+
+.title {
+  /* 直播正在準備 */
+  position: absolute;
+  width: 690px;
+  height: 174px;
+  left: 140px;
+  top: 89px;
+  font-family: Noto Sans TC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 120px;
+  line-height: 174px;
+  /* identical to box height */
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+
+.stream_title {
+  /* 未命名的直播 沒關係 很快就會更新上去的。 */
+  position: absolute;
+  width: 600px;
+  height: 261px;
+  left: 140px;
+  top: 410px;
+  font-family: Noto Sans TC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 87px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+
+.username {
+  /* HERCULINS */
+  position: absolute;
+  width: 353px;
+  height: 87px;
+  left: 1411px;
+  top: 100px;
+  font-family: Noto Sans TC;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 87px;
+  /* identical to box height */
+  text-align: right;
+  color: #FFFFFF;
+}
+
+.info_1 {
+  position: absolute;
+  width: 249px;
+  height: 86px;
+  left: 140px;
+  top: 902px;
+  font-family: Noto Sans TC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+
+.info_2 {
+  /* 舊直播台來自 @ oldman_wolverine */
+  position: absolute;
+  width: 411px;
+  height: 86px;
+  left: 537px;
+  top: 902px;
+  font-family: Noto Sans TC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+
+img {
+  /* IMG_0098 1 */
+  position: absolute;
+  width: 421px;
+  height: 421px;
+  left: 1421px;
+  top: 642px;
+}
+/*# sourceMappingURL=style.css.map */
