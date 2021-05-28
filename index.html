@@ -10,17 +10,25 @@
 
 <body>
     <script>
+        const opts = {
+            url: 'https://id.twitch.tv/oauth2/validate',
+            headers: {
+                'Authorization': `Bearer fmi3zryis1feojd6jahczmrynxli8e`,
+                'client-id': `qcqur1fmzff2g56dcxebq7vjocwr3q`
+            }
+        };
+
         const url = "https://api.twitch.tv/helix/channels?broadcaster_id=141981764"
         fetch(url, {
             method: 'GET',
             headers: {
                 'client-id': 'qcqur1fmzff2g56dcxebq7vjocwr3q',
-                'Authorization': 'fmi3zryis1feojd6jahczmrynxli8e'
+                'Authorization': 'Bearer fmi3zryis1feojd6jahczmrynxli8e'
             }
         }).then(res => {
-            return res.json(); // 使用 text() 可以得到純文字 String
+            return res.json();
         }).then(result => {
-            console.log(result); // 得到「你的名字是：oxxo，年紀：18 歲。」
+            console.log(result);
         });
     </script>
 </body>
