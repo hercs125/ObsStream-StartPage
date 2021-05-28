@@ -1,8 +1,8 @@
 body {
     /* 直播即將開始 */
     position: relative;
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
     background: #000000;
 }
 
@@ -29,7 +29,7 @@ body {
     width: 600px;
     height: 261px;
     left: 140px;
-    top: 410px;
+    bottom: 409px;
     font-family: Noto Sans TC;
     font-style: normal;
     font-weight: bold;
@@ -46,7 +46,7 @@ body {
     position: absolute;
     width: 353px;
     height: 87px;
-    left: 1411px;
+    right: 156px;
     top: 100px;
     font-family: Noto Sans TC;
     font-style: normal;
@@ -59,11 +59,12 @@ body {
 }
 
 .info_1 {
+    /* 立即訂閱與追隨我們的社群連結。 */
     position: absolute;
     width: 249px;
     height: 86px;
     left: 140px;
-    top: 902px;
+    bottom: 92px;
     font-family: Noto Sans TC;
     font-style: normal;
     font-weight: normal;
@@ -81,7 +82,7 @@ body {
     width: 411px;
     height: 86px;
     left: 537px;
-    top: 902px;
+    bottom: 92px;
     font-family: Noto Sans TC;
     font-style: normal;
     font-weight: normal;
@@ -98,7 +99,7 @@ img {
     position: absolute;
     width: 421px;
     height: 421px;
-    left: 1421px;
-    top: 642px;
+    right: 78px;
+    bottom: 17px;
     // background: url(IMG_0098.png);
 }

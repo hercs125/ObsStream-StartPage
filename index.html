@@ -11,7 +11,7 @@
 
 <body>
     <div class="title">直播正在準備</div>
-    <div class="stream_title"></div>
+    <div class="stream_title">okok</div>
     <div class="username">HERCULINS</div>
     <div class="info_1">
         立即訂閱與追隨我們的社群連結。
@@ -52,6 +52,9 @@
         }).then(result => {
             stream_info = result.data[0];
             console.log(result.data[0]);
+
+            console.log(stream_info);
+            document.getElementsByClassName("stream_title")[0].innerHTML = stream_info.title;
         });
     </script>
 </body>
