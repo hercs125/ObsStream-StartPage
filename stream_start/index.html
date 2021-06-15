@@ -25,8 +25,8 @@
         //
         //
         const api_key = {
-            client_id: "qcqur1fmzff2g56dcxebq7vjocwr3q",
-            client_secret: "h3y9kapvoxtyrt11wzht7aj9u97dzy"
+            client_id: "cjzg090ke1alaat8wb59s35w6yqfvn",
+            client_secret: "jir2n9gbkwqdt7dq5eo44bdsxccmyb"
         }
         var url = `https://id.twitch.tv/oauth2/token?client_id=${api_key.client_id}&client_secret=${api_key.client_secret}&grant_type=client_credentials`;
 
@@ -50,8 +50,8 @@
         fetch(urla, {
             method: 'GET',
             headers: {
-                'client-id': 'cjzg090ke1alaat8wb59s35w6yqfvn',
-                'Authorization': 'Bearer jir2n9gbkwqdt7dq5eo44bdsxccmyb'
+                'client-id': '',
+                'Authorization': 'Bearer '
             }
         }).then(res => {
             return res.json();
