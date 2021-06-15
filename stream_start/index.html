@@ -62,7 +62,7 @@
 
             console.log(stream_info);
             document.getElementsByClassName("stream_title")[0].innerHTML = stream_info.title;
-            if (stream_info.game_name != "") {
+            if (stream_info.game_name != "" || stream_info.game_name != "undefined") {
                 document.getElementsByClassName("info_1")[0].innerHTML = `正在直播<br>${stream_info.game_name}`;
             } else {
                 document.getElementsByClassName("info_1")[0].innerHTML = `立即訂閱與追隨我們的社群連結。`;
