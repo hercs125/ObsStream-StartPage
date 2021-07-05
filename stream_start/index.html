@@ -12,7 +12,7 @@
 <body>
     <div class="title">直播正在準備</div>
     <div class="stream_title">更新中...</div>
-    <div class="username">HERCULINS</div>
+    <div class="username">HERCS125</div>
     <div class="info_1">
         立即訂閱與追隨我們的社群連結。
     </div>
@@ -22,30 +22,37 @@
     <img src="IMG_0098.png" alt="">
     <script>
         var stream_info;
-        // const api_key = {
-        //     client_id: "qcqur1fmzff2g56dcxebq7vjocwr3q",
-        //     client_secret: "h3y9kapvoxtyrt11wzht7aj9u97dzy"
-        // }
-        // var url = `https://id.twitch.tv/oauth2/token?client_id=${api_key.client_id}&client_secret=${api_key.client_secret}&grant_type=client_credentials`;
+        //
+        //
+//         const api_key = {
+//             client_id: "cjzg090ke1alaat8wb59s35w6yqfvn",
+//             client_secret: "jir2n9gbkwqdt7dq5eo44bdsxccmyb"
+//         }
+//         var url = `https://id.twitch.tv/oauth2/token?client_id=${api_key.client_id}&client_secret=${api_key.client_secret}&grant_type=client_credentials`;
 
-        // var xhr = new XMLHttpRequest();
+//         var xhr = new XMLHttpRequest();
 
-        // xhr.open("POST", url);
+//         xhr.open("POST", url);
 
-        // xhr.onreadystatechange = function() {
-        //     if (xhr.readyState === 4) {
-        //         console.log(xhr.status);
-        //         console.log(xhr.responseText);
-        //     }
-        // };
+//         xhr.onreadystatechange = function() {
+//             if (xhr.readyState === 4) {
+//                 console.log(xhr.status);
+//                 console.log(xhr.responseText);
+//             }
+//         };
 
-        // xhr.send();
-        const urla = "https://api.twitch.tv/helix/channels?broadcaster_id=686699081"
+//         xhr.send();
+        
+        //
+        //
+        
+        const urla = "https://api.twitch.tv/helix/channels?broadcaster_id=697921696"
+//           const urla = "https://api.twitch.tv/helix/users?login=hercs125"
         fetch(urla, {
             method: 'GET',
             headers: {
-                'client-id': 'qcqur1fmzff2g56dcxebq7vjocwr3q',
-                'Authorization': 'Bearer benupf5wfm9bb7aed54pfphgde2zfx'
+                'client-id': 'cjzg090ke1alaat8wb59s35w6yqfvn',
+                'Authorization': 'Bearer 7tknz1rkeddqkyc556k1b8xog9b5q7'
             }
         }).then(res => {
             return res.json();
@@ -55,7 +62,7 @@
 
             console.log(stream_info);
             document.getElementsByClassName("stream_title")[0].innerHTML = stream_info.title;
-            if (stream_info.game_name != "") {
+            if (stream_info.game_name != "" || stream_info.game_name != "undefined") {
                 document.getElementsByClassName("info_1")[0].innerHTML = `正在直播<br>${stream_info.game_name}`;
             } else {
                 document.getElementsByClassName("info_1")[0].innerHTML = `立即訂閱與追隨我們的社群連結。`;
