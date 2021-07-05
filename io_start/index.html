@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <img src="live.png" alt=""> -->
+    <h2 class="title">這裡沒東西，所以我們正在嘗試載入中。</h2>
+    <div class="platfrom">Herculins，<br>正在Twitch上直播。</div>
+    <div class="class">正在直播<br>Art</div>
+    <div class="img"></div>
+
+    <script>
+        var stream_info;
+        // const api_key = {
+        //     client_id: "qcqur1fmzff2g56dcxebq7vjocwr3q",
+        //     client_secret: "h3y9kapvoxtyrt11wzht7aj9u97dzy"
+        // }
+        // var url = `https://id.twitch.tv/oauth2/token?client_id=${api_key.client_id}&client_secret=${api_key.client_secret}&grant_type=client_credentials`;
+
+        // var xhr = new XMLHttpRequest();
+
+        // xhr.open("POST", url);
+
+        // xhr.onreadystatechange = function() {
+        //     if (xhr.readyState === 4) {
+        //         console.log(xhr.status);
+        //         console.log(xhr.responseText);
+        //     }
+        // };
+
+        // xhr.send();
+        const urla = "https://api.twitch.tv/helix/channels?broadcaster_id=697921696"
+        const urlb = "https://api.twitch.tv/helix/streams/tags?broadcaster_id=697921696";
+        var tags = "";
+        var big_title = "";
+        var catg = "";
+        fetch(urla, {
+            method: 'GET',
+            headers: {
+                'client-id': 'qcqur1fmzff2g56dcxebq7vjocwr3q',
+                'Authorization': 'Bearer benupf5wfm9bb7aed54pfphgde2zfx'
+            }
+        }).then(res => {
+            return res.json();
+        }).then(result => {
+            stream_info = result.data[0];
+            console.log(result.data[0]);
+            big_title = stream_info.title;
+            console.log(stream_info);
+            // document.getElementsByClassName("stream_title")[0].innerHTML = stream_info.title;
+            if (stream_info.game_name != "") {
+                document.getElementsByClassName("class")[0].innerHTML = `正在直播<br>${stream_info.game_name}`;
+            } else {
+                document.getElementsByClassName("class")[0].innerHTML = `立即訂閱與追隨我們的社群連結。`;
+            }
+        }).then(
+            () => {
+                fetch(urlb, {
+                    method: 'GET',
+                    headers: {
+                        'client-id': 'qcqur1fmzff2g56dcxebq7vjocwr3q',
+                        'Authorization': 'Bearer benupf5wfm9bb7aed54pfphgde2zfx'
+                    }
+                }).then(res => {
+                    return res.json();
+                }).then(result => {
+                    stream_info = result.data;
+                    console.log(result);
+                    for (let index = 0; index < stream_info.length; index++) {
+                        console.log(stream_info[index].localization_names["zh-tw"]);
+                        tags = tags + "、" + stream_info[index].localization_names["zh-tw"];
+                    }
+                    console.log(tags);
+                    big_title = big_title + tags;
+                    console.log(big_title);
+                    if (big_title != "") {
+                        document.getElementsByClassName("title")[0].innerHTML = big_title + "。";
+                    } else {
+                        document.getElementsByClassName("title")[0].innerHTML = `沒有東西。`;
+                    }
+                });
+            }
+        );
+
+
+        //
+    </script>
+</body>
+
+</html>

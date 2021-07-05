@@ -1,0 +1,72 @@
+body {
+    background-color: #181818;
+}
+
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    /* 沒事就想開直播，LGBTAI+、設計、平面設計、中文、Creative 創作 */
+    position: absolute;
+    width: 1700px;
+    height: 600px;
+    left: 110px;
+    top: 100px;
+    font-family: 'jf-openhuninn-1.1';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 100%;
+    /* or 150px */
+    color: #FFFFFF;
+}
+
+.class {
+    /* 正在直播 Art */
+    position: absolute;
+    width: 532px;
+    height: 56px;
+    right: 110px;
+    bottom: 100px;
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 92.5%;
+    /* or 28px */
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.img {
+    display: none;
+    position: absolute;
+    width: 1228px;
+    height: 595px;
+    left: 346px;
+    bottom: 100px;
+    background: url(live.png);
+}
+
+.platfrom {
+    /* Herculins， 正在Twitch上直播。 */
+    position: absolute;
+    width: 532px;
+    height: 193px;
+    left: 110px;
+    bottom: 101px;
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 92.5%;
+    /* or 28px */
+    display: flex;
+    align-items: flex-end;
+}
